@@ -9,24 +9,26 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.shi</groupId>
-    <artifactId>system</artifactId>
+    <artifactId>eureka</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-eureka-server -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+            <version>2.2.5.RELEASE</version>
         </dependency>
+
     </dependencies>
-
-
 
 </project>

@@ -1,9 +1,9 @@
 server:
-  port: 8080
+  port: 8081
 eureka:
   client:
     service-url:
       defaultZone : http://127.0.0.1:10086/eureka
 spring:
   application:
-    name: system
+    name: test-cloud

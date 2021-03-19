@@ -6,7 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="eurekatwo" />
         <module name="system" />
+        <module name="eureka" />
+        <module name="cloudtest" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -15,7 +18,10 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="cloudtest" options="-parameters" />
       <module name="com.shi.system" options="-parameters" />
+      <module name="eureka" options="-parameters" />
+      <module name="eurekatwo" options="-parameters" />
       <module name="jianli" options="" />
       <module name="system" options="-parameters" />
     </option>
