@@ -23,11 +23,7 @@ public class UserTestController {
     private DiscoveryClient discoveryClient;
     @GetMapping("getUser/{userName}")
     public UserPO getUser(@PathVariable("userName") String userName){
-        List<ServiceInstance> system = discoveryClient.getInstances("system");
-        ServiceInstance serviceInstance = system.get(0);
-//        String url = "http://localhost:8080/system/user/getUser/1";
-//        UserPO forObject = restTemplate.getForObject(url, UserPO.class);
-        UserPO forObject = restTemplate.getForObject(serviceInstance.getUri() + "/system/user/getUser/1", UserPO.class);
+        UserPO forObject = restTemplate.getForObject("http://system/system/user/getUser/1", UserPO.class);
         return forObject;
     }
 }

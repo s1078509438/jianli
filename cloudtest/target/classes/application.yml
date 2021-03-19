@@ -1,9 +1,15 @@
 server:
   port: 8081
+  #配置eureka集群
 eureka:
   client:
     service-url:
-      defaultZone : http://127.0.0.1:10086/eureka
+      defaultZone : http://127.0.0.1:10086/eureka,http://127.0.0.1:10087/eureka
 spring:
   application:
     name: test-cloud
+    #ribbon饿加载
+ribbon:
+  eager-load:
+    enabled: true
+    clients: test-cloud

@@ -1,5 +1,6 @@
 server:
   port: 8081
+  #配置eureka集群
 eureka:
   client:
     service-url:
@@ -7,3 +8,8 @@ eureka:
 spring:
   application:
     name: test-cloud
+    #ribbon饿加载
+ribbon:
+  eager-load:
+    enabled: true
+    clients: test-cloud
